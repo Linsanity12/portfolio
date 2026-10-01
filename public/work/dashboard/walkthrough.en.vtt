@@ -1,0 +1,65 @@
+WEBVTT
+
+1
+00:00:02.170 --> 00:00:09.930
+A dashboard for comparing LLMs on one real task, sorting support tickets, by accuracy, speed and cost.
+
+2
+00:00:10.080 --> 00:00:15.730
+One frozen run: 2 models x 2 prompts x 45 held-out tickets = 180 real requests. All 180 completed in 62 seconds; none failed.
+
+3
+00:00:15.880 --> 00:00:25.140
+Cost, from recorded token usage: $0.1034 against a $1.00 budget cap that is checked before each request.
+
+4
+00:00:25.290 --> 00:00:31.450
+Every request returned valid output. Accuracy, latency and cost sit side by side, never merged into one score.
+
+5
+00:00:31.600 --> 00:00:38.460
+Whole-ticket accuracy: Claude Haiku 4.5 with the detailed prompt got 25 of 45 tickets fully right. Every other combination got 22 of 45.
+
+6
+00:00:38.610 --> 00:00:44.060
+That is a three-ticket gap on one repetition: a small-sample observation, not proof that either model is better.
+
+7
+00:00:44.210 --> 00:00:49.080
+The clear difference is cost: about 10x more per request for Haiku ($0.00105 vs $0.00010).
+
+8
+00:00:49.230 --> 00:00:56.390
+Median latency is roughly 11-20% higher for Haiku; the tail (p95) is mixed.
+
+9
+00:00:56.540 --> 00:01:04.880
+The same trade-off plotted: a large cost gap, for an accuracy gap this run cannot confirm.
+
+10
+00:01:05.030 --> 00:01:09.020
+Everything can be filtered and opened. Here, the account category, which scored lowest.
+
+11
+00:01:09.170 --> 00:01:17.220
+Only four tickets sit in that category (n = 4), so its 25% comes down to three tickets that most combinations missed.
+
+12
+00:01:17.370 --> 00:01:25.390
+Every result opens to the exact input, expected answer and model output. Here, ticket t23.
+
+13
+00:01:25.540 --> 00:01:33.010
+GPT-4o mini (concise prompt) got the category and order ID right, but priority (medium vs low) and needs-human (false vs true) missed the label.
+
+14
+00:01:33.160 --> 00:01:40.480
+The exact prompt and the raw model output are one click away.
+
+15
+00:01:40.630 --> 00:01:47.480
+Across all 180 results, most misses were priority or needs-human disagreements on vague tickets. Order IDs were right every time.
+
+16
+00:01:47.630 --> 00:01:53.550
+Limits: 120 fictional tickets, one labeler, one repetition, exact-match scoring. A small comparison, not a benchmark.

@@ -1,0 +1,29 @@
+@import "tailwindcss";
+
+:root {
+  --bg: #f4f1ea;
+  --bg-raised: #ffffff;
+  --ink: #16140f;
+  --ink-muted: #6b6558;
+  --accent: #2f5fe0;
+  --accent-glow: rgba(47, 95, 224, 0.35);
+  --grid-color: rgba(22, 20, 15, 0.06);
+}
+
+body {
+  color: var(--ink);
+  background: var(--bg);
+  min-height: 100vh;
+  font-family: var(--font-geist-sans), sans-serif;
+}
+
+.engineering-grid {
+  background-size: 40px 40px;
+  background-image:
+    linear-gradient(to right, var(--grid-color) 1px, transparent 1px),
+    linear-gradient(to bottom, var(--grid-color) 1px, transparent 1px);
+}
+
+.mono {
+  font-family: var(--font-geist-mono), 'JetBrains Mono', monospace;
+}
